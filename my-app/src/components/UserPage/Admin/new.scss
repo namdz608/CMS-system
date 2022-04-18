@@ -1,0 +1,114 @@
+.new{
+    width: 100%;
+    display: flex;
+
+    .new-container{
+        flex: 6;
+    }
+
+    .top-new, .bottom-new{
+        -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
+        box-shadow: 2px 4px 10px 1px rgba(201,201,201, 0.47);
+        padding: 10px;
+        margin: 20px;
+        display: flex;
+        border-radius: 10px;
+        h1{
+            color: rgb(131, 126, 126);
+            font-size: 24px;
+        }
+
+        .left-container{
+            flex: 1; 
+            text-align: center;
+            align-content: center;
+            justify-content: center;
+            align-items: center;
+            justify-items: center;
+            .previewImage{
+                height: 140px;
+                width: 140px;
+                border-radius: 50%;
+                object-fit: cover;
+                margin: 20px auto;
+              
+
+            }
+        }
+
+        .right-container{
+            flex: 2;
+
+            form{
+                display: flex !important;
+                flex-wrap: wrap !important;
+                gap: 20px !important;
+                justify-content: space-around;
+                .form-input{
+                    width: 40%;
+
+                    input{
+                        width: 100%;
+                        padding: 5px;
+                        border: none;
+                        border-bottom: 1px solid gray ;
+                    } 
+
+                    label{
+                        display: flex;
+                        align-items: center;
+                        gap: 10px;
+
+                        
+                    }
+
+                    .select{
+                        width: 100%;
+                        padding: 5px;
+                        
+                        border-radius: 8px;
+                    }
+
+                   
+                }
+            }
+        }
+        .icon{
+            cursor: pointer;
+            size: 30px ;
+           
+        }
+
+        .btn-warning{
+            width: 150px;
+            padding: 10px;
+            color: white;
+            background-color: #14c974;
+            font-weight: bold;
+            border: none;
+            
+        
+            &:hover{
+                background-color: #14c974;
+                color: black;
+            }
+        }
+    }
+
+    
+}
+
+
+.preview-img-container {
+  
+    .previewImage {
+      height: 200px;
+      width: 300px;
+      border: 3px solid rgb(20, 20, 20);
+      background: center center no-repeat;
+      background-size: contain;
+      align-self: center;
+      justify-self: center;
+    }
+  }
+  

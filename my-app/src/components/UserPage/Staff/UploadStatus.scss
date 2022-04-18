@@ -1,0 +1,52 @@
+
+.upload{
+    width: 100%;
+    display: flex;
+
+    .upload-container {
+        flex: 6;
+    }
+
+    h3{
+        color: rgb(131, 126, 126);
+        font-size: 24px;
+    }
+
+    .btn-warning{
+        width: 150px;
+        padding: 10px;
+        color: white;
+        background-color: #14c974;
+        font-weight: bold;
+        border: none;
+        
+    
+        &:hover{
+            background-color: #14c974;
+        }
+    }
+}
+
+
+.container-upload{
+    display: grid;
+    justify-items: center;
+    padding: 0;
+	align-content: start;
+	margin: auto;
+	gap: 20px;
+}
+
+.top-upload, .bottom-upload{
+    -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
+    box-shadow: 2px 4px 10px 1px rgba(201,201,201, 0.47);
+    padding: 10px;
+    margin: 20px;
+    display: flex;
+    border-radius: 10px;
+}
+
+
+
+
+

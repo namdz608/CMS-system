@@ -1,0 +1,44 @@
+.modal-container{
+    .modal-content{
+        height:550px;
+        .modal-header{
+            padding:10px;
+            border-bottom: 3px solid #ccc;
+            .right{
+                float:right;
+            }
+            .left{
+                font-size:15px;
+                font-weight:bold;
+                color:#333;
+            }
+        }
+        .modal-body{
+            padding:15px;
+        }
+        .modal-footer{
+            padding:10px;
+            border-top:1px solid #ccc;
+            display: flex;
+            justify-content:flex-end;
+            gap:15px;
+            button{
+                border: none;
+                outline: none;
+                padding:5px;
+                border-radius: 3px;
+                -webkit-border-radius: 3px;
+                -moz-border-radius: 3px;
+                -ms-border-radius: 3px;
+                -o-border-radius: 3px;
+}
+            .btn-booking{
+                background-color:orange
+            }
+            .btn-cancel{
+                background-color:red
+
+            }
+        }
+    }
+}

@@ -1,0 +1,44 @@
+.cat{
+    display: flex;
+
+    .cat-container {
+        flex: 6;
+    }
+
+    .top-cat, .bottom-cat {
+        -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
+        box-shadow: 2px 4px 10px 1px rgba(201,201,201, 0.47);
+        padding: 10px;
+        margin: 20px;
+        display: flex;
+        border-radius: 10px;
+    }
+    h1{
+        color: rgb(131, 126, 126);
+            font-size: 24px;
+    }
+
+    .cat-form {
+        width: 80%;
+        padding: 10px;
+        border-radius: 8px;
+        border: 0.5px solid rgb(189, 188, 188);
+    }
+
+
+    .btn-warning{
+        width: 150px;
+        padding: 10px;
+        color: white;
+        background-color: #14c974;
+        font-weight: bold;
+        border: none;
+        
+    
+        &:hover{
+            background-color: #14c974;
+            color: black;
+        }
+    }
+
+}

@@ -1,0 +1,94 @@
+.deadline{
+    display: flex;
+    .deadline-top{
+        -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
+        box-shadow: 2px 4px 10px 1px rgba(201,201,201, 0.47);
+        padding: 10px;
+        margin: 20px;
+        h1{
+            color: rgb(131, 126, 126);
+            font-size: 30px;
+        }
+    }
+    .deadline-container{
+        flex: 5;
+
+
+        .deadline-time{
+            
+            padding: 10px;
+            margin: 20px;
+            
+            border-radius: 10px;
+
+
+            
+
+
+            .time{
+                max-width: 300px;
+                text-align: center;
+                
+                font-size: 16px;
+                font-weight: 500;
+                background-color: #1BBC9B;
+                border-radius: 10px;
+                border: 0.5px solid rgb(206, 204, 204);
+                margin: 10px auto 10px;
+                padding: 15px 40px 15px  40px ;
+                color: aliceblue;
+                
+            }
+
+            label{
+                font-size: 22px;
+                font-weight: 500;
+            }
+        }
+    }
+
+
+    .deadline-time{
+        display: grid;
+        text-align: center;
+        gap: 20px;
+        
+        .left{
+            -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
+            box-shadow: 2px 4px 10px 1px rgba(201,201,201, 0.47);
+        }
+        .right{
+            -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
+            box-shadow: 2px 4px 10px 1px rgba(201,201,201, 0.47);
+        }
+
+        h2{
+            
+            font-size: 28px;
+        }
+       
+        }
+
+    
+
+    @media screen and (min-width: 768px) {
+        .deadline-time{
+          grid-template-columns: repeat(2,1fr);
+          
+        }
+      }
+
+      .btn-warning{
+        width: 150px;
+        padding: 10px;
+        color: white;
+        background-color: #14c974;
+        font-weight: bold;
+        border: none;
+        margin-bottom: 14px;
+    
+        &:hover{
+            background-color: #14c974;
+        }
+    }
+}

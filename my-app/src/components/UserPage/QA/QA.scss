@@ -1,0 +1,102 @@
+.profile{
+    width: 100%;
+    display: flex;
+
+    .profile-cotainer{
+        flex: 6;
+    }
+    .top-profile{
+        -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
+        box-shadow: 2px 4px 10px 1px rgba(201,201,201, 0.47);
+        padding: 10px;
+        margin: 20px;
+        display: flex;
+        border-radius: 10px;
+        h1{
+            color: rgb(131, 126, 126);
+            font-size: 24px;
+        }
+        
+    }
+
+
+    .bottom-profile{
+        
+        padding: 10px;
+        margin: 20px;
+        display: flex;
+        gap: 10px;
+        height: 300px;
+        .left-container{
+            padding: 10px;
+            flex: 1; 
+            text-align: center;
+            
+            -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
+            box-shadow: 2px 4px 10px 1px rgba(201,201,201, 0.47);
+            
+            border-radius: 10px;
+            img{
+                height: 100px;
+                width: 100px;
+                border-radius: 50%;
+                object-fit: cover;
+            }
+
+            h2{
+                font-weight: 600;
+                font-size: 20px;
+                
+            }
+        }
+
+        .right-container{
+            padding: 10px 60px 10px 60px;
+            flex: 2;
+            -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
+            box-shadow: 2px 4px 10px 1px rgba(201,201,201, 0.47);
+
+            h1{
+                color: rgb(131, 126, 126);
+                font-size: 20px;
+                text-align: center;
+            }
+            h2{
+                font-weight: 400;
+                font-size: 20px;
+                
+            }
+            .user-info{
+                display: flex;
+
+                .left-info{
+                    flex: 1;
+                }
+
+                .right-info{
+                    flex: 1;
+                    text-align: right;
+                }
+            }
+        }
+}
+
+.btn-warning{
+    width: 150px;
+    padding: 10px;
+    color: white;
+    background-color: #14c974;
+    font-weight: bold;
+    border: none;
+    margin-bottom: 14px;
+
+    &:hover{
+        background-color: #14c974;
+        color: black;
+    }
+}
+    
+}   
+
+
+
