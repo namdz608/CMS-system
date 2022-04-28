@@ -1,5 +1,5 @@
-const db  = require('../models/index');
-const emailService = require('./emailService');
+const db =require('../models/index')
+const emailService= require('./emailService')
 let handleUploadStatus=async(data)=>{
     try{
         if(!data.categoryId || !data.contentHtml){
@@ -56,7 +56,7 @@ let handleGetAllStatus = async()=>{
                 {model:db.User,attributes:['firstName','lastName','image','email']},
                 {model:db.Category,attributes:['categorytype','id']},
                 {model:db.Reaction,attributes:['like','dislike','statusId']},
-                {model:db.Comment,attributes:['id','comment','userId','statusId'],
+                {model:db.Comment,attributes:['id','comment','userId','statusId','state'],
                 include:[
                     {model:db.User}
                 ],},
@@ -97,11 +97,7 @@ let updateReaction=async(data)=>{
             react.like=data.like
             react.dislike=data.dislike
            await react.save()
-         await emailService.sendSimpleEmail1({
-             userSent: data.user,
-             userReceived: data.statusOwner,
-             state:data.state
-         })
+         
             return{
                 errCode:0,
                 errMessage:'Update successfully'
@@ -129,8 +125,13 @@ let handlePostComment=async(data)=>{
         else{
             let a=await db.Comment.create({
                 userId:data.userId,
+                state:data.state,
                 statusId:data.statusId,
                 comment:data.comment,               
+            })
+            await emailService.sendSimpleEmail1({
+                userSent: data.user,
+                userReceived: data.statusOwner,
             })
             return{
                 errCode:0,

@@ -20,6 +20,7 @@ module.exports = (sequelize, DataTypes) => {
     statusId:DataTypes.INTEGER,
     userId: DataTypes.INTEGER,
     comment: DataTypes.STRING,
+    state:DataTypes.STRING
   }, {
     sequelize,
     modelName: 'Comment',

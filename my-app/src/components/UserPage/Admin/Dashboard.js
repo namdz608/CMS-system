@@ -80,7 +80,7 @@ datasets: [
     async componentDidMount() {
       
       let a=await getReactionDash()
-      
+      console.log()
       let b=a.data.data.map(item => {
           return item.User.firstName
       })

@@ -1,4 +1,4 @@
-const nodemailer = require('nodemailer'); 
+const nodemailer= require('nodemailer');
 
 let sendSimpleEmail=async(dataSent)=>{
     let transporter = nodemailer.createTransport({
@@ -49,7 +49,7 @@ let sendSimpleEmail1=async(dataSent)=>{
       subject: "New Status 👹👹👹", // Subject line
       text: "Hello world?", // plain text body
       html: `<h2>Hello User ${dataSent.userReceived} 🦸‍♂️🦸‍♂️ !</h2>
-              <div><b>Staff ${dataSent.userSent} has ${dataSent.state} your Status</b></div>
+              <div><b>Staff ${dataSent.userSent} has commented on your Status</b></div>
               <div>Have a nice day 🦖🦖🦖 !!</div>
               `, // html body
     });
