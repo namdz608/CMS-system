@@ -1,70 +1,57 @@
-# Getting Started with Create React App
+1. Quality Assurance Manager
+o See the lists of Most Popular Ideas (+1 for Thumbs Up, -1 for
+Thumbs Down), Most Viewed Ideas, Latest Ideas and Latest
+Comments
+o Add additional categories, delete unused categories
+o View statistics by dashboard such as:
+ Number of ideas per department/year
+ Numbers of contributors (staffs with idea submission) per departments
+o Download all idea data after the final closure date in CSV file
+o Download all uploaded documents in ZIP format
+2. Quality Assurance Coordinator (for each department)
+o Receive email notifications for new submissions from staff
+o See the lists of Most Popular Ideas (+1 for Thumbs Up, -1 for
+Thumbs Down), Most Viewed Ideas, Latest Ideas and Latest
+Comments
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+3. Staff (Academic and support)
+o Submit (upload) 1 or many documents (Word or PDF) until
+the first closure date
+Note: 1 idea can be represented by 1 or many documents.
+Idea must be categorized from the list =&gt; add category list in
+table idea
+o Must agree to Terms and Conditions before they can submit
+documents
 
-## Available Scripts
+Note: Terms and Conditions can be shown by a popup dialog
+=&gt; add the checkbox for agreement
+o Can see all submitted ideas (not only their own ideas)
+o Can read comment for any other ideas
+o Can give comment for any other ideas until the final closure
+date
+o Can give Thumbs Up (Like) or Thumbs Down (Dislike) for any
+idea, but only 1 time for each idea
+o Receive email notification when their ideas got new
+comment
+o See the lists of Most Popular Ideas (+1 for Thumbs Up, -1 for
+Thumbs Down), Most Viewed Ideas, Latest Ideas and Latest
+Comments
 
-In the project directory, you can run:
+4. Admin
+o Create new accounts (QA manager, QA coordinator, staff)
+o Set &amp; edit first closure date &amp; final closure date
+Note: You can set a fixed duration between these 2 dates
+such as 2 weeks
+o Maintain system data: first closure date &amp; final closure date
+for each academic year, staff details,…
+o See the lists of Most Popular Ideas (+1 for Thumbs Up, -1 for
+Thumbs Down), Most Viewed Ideas, Latest Ideas and Latest
+Comments
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Role	           Email	                    Password
+Admin	           namvu7689@gmail.com	        123456
+QA Coordinator	   namvkgch190855@fpt.edu.vn	123456
+QA Manager	       phuongvtgch17530@fpt.edu.vn  123456
+Staff	           Truongluuson99@gmail.com	    123456
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
