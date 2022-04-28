@@ -1,265 +1,368 @@
 .view {
+  display: flex;
+  width: 100%;
+
+  .view-status {
+    flex: 4;
+    background-color: #f0f2f5;
+  }
+
+  .comment-ideas {
     display: flex;
-    width: 100%;
-  
-    .view-status {
-      flex: 4;
-      background-color: #f0f2f5;
-    }
-  
-    .comment-ideas {
-      display: flex;
-      gap: 30px;
-      margin-bottom: 14px;
-      .comment-text {
-        flex: 7;
-      }
-    }
-    .idea-header {
-      display: flex;
-      margin-left: 12px;
-      .avt img {
-        width: 42px;
-        height: 42px;
-        border-radius: 50%;
-        border: 0.5px solid rgb(202, 200, 200);
-      }
-  
-      .user-account {
-        flex: 6;
-        margin-left: 8px;
-        font-size: 16px;
-        font-weight: 600;
-  
-        .date-created {
-          font-size: 13px;
-          color: rgb(114, 112, 112);
-          .icon-date {
-            font-size: 18px;
-          }
-        }
-      }
-    }
-  
-    .idea-footer {
-      font-size: 14px;
-    
-      border-top: 1px solid #ccc;
-      display: flex;
-      
-      
-  
-      .likes,
-      .dislikes,
-      .comment-btn {
-        padding: 5px 80px  5px  80px;
-        width: 100%;
-       text-align: center;
-      
-        &:hover {
-          cursor: pointer;
-          background-color: rgb(236, 236, 236);
-        }
-       
-      }
-      
-  
-      .icon {
-        &:hover {
-          cursor: pointer;
-        }
-        &:active {
-          color: rgb(88, 88, 241);
-        }
-      }
-    }
-    .comment-btn{
-      font-size: 15px;
-    }
-    .select {
-      margin-left: 10px;
-      margin-top: 3px;
-      padding: 5px;
-  
-      border-radius: 8px;
+    gap: 30px;
+    margin-bottom: 14px;
+    .comment-text {
+      flex: 7;
     }
   }
-  
-  .status-container {
-    gap: 25px;
-    .modal-content {
-      -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
-      box-shadow: 2px 4px 10px 1px rgba(201, 201, 201, 0.47);
+  .idea-header {
+    display: flex;
+    margin-left: 12px;
+    .avt img {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      border: 0.5px solid rgb(202, 200, 200);
+    }
+
+    .user-account {
+      flex: 6;
+      margin-left: 8px;
+      font-size: 16px;
+      font-weight: 600;
+
+      .date-created {
+        font-size: 13px;
+        color: rgb(114, 112, 112);
+        .icon-date {
+          font-size: 18px;
+        }
+      }
+    }
+  }
+
+  .idea-footer {
+    font-size: 14px;
+
+    border-top: 1px solid #ccc;
+    display: flex;
+    button{
+      border: none !important;
+      background-color: #fff;
+
+     
+    }
+    .likes,
+    .dislikes,
+    .comment-btn {
+      padding: 5px 80px 5px 80px;
+      width: 100%;
+      text-align: center;
+
+      &:hover {
+        cursor: pointer;
+        border: solid 0.5px #ccc;
+      }
+    }
+
+    .icon {
+      &:hover {
+        cursor: pointer;
+      }
+      &:active {
+        color: rgb(88, 88, 241);
+      }
+    }
+  }
+  .comment-btn {
+    font-size: 15px;
+  }
+  .select {
+    margin-left: 10px;
+    margin-top: 3px;
+    padding: 5px;
+
+    border-radius: 8px;
+  }
+}
+
+.status-container {
+  gap: 25px;
+  .modal-content {
+    -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
+    box-shadow: 2px 4px 10px 1px rgba(201, 201, 201, 0.47);
+    padding: 10px;
+    display: flex;
+    border-radius: 10px;
+    border: 0.5px solid rgb(219, 216, 216);
+    margin: auto;
+    margin-top: 10px;
+
+    width: 90%;
+    .modal-header {
       padding: 10px;
+      border-bottom: 3px solid #ccc;
+      .right {
+        float: right;
+      }
+      .left {
+        font-size: 15px;
+        font-weight: bold;
+        color: #333;
+      }
+    }
+    .modal-body {
+      padding: 15px;
+      .content-left {
+        width: 20%;
+        height: 150px;
+        cursor: pointer;
+        img {
+          width: 120px;
+          height: 120px;
+          border-radius: 50%;
+        }
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-color: #fff;
+
+        &.section-doctor {
+          width: 120px;
+          height: 120px;
+          border-radius: 50%;
+        }
+      }
+      .content-right {
+        // width:80%;
+        padding-left: 10px;
+        padding-top: 10px;
+      }
+    }
+    .modal-footer {
+      padding: 10px;
+      border-top: 1px solid #ccc;
       display: flex;
-      border-radius: 10px;
-      border: 0.5px solid rgb(219, 216, 216);
-      margin: auto;
-      margin-top: 10px;
-  
-      width: 100vh;
-      .modal-header {
-        padding: 10px;
-        border-bottom: 3px solid #ccc;
-        .right {
-          float: right;
-        }
-        .left {
-          font-size: 15px;
-          font-weight: bold;
-          color: #333;
-        }
+      justify-content: flex-end;
+      gap: 15px;
+      button {
+        border: none;
+        outline: none;
+        padding: 5px;
+        border-radius: 3px;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        -ms-border-radius: 3px;
+        -o-border-radius: 3px;
       }
-      .modal-body {
-        padding: 15px;
-        .content-left {
-          width: 20%;
-          height: 150px;
-          cursor: pointer;
-          img {
-            width: 120px;
-            height: 120px;
-            border-radius: 50%;
-          }
-          background-position: center center;
-          background-repeat: no-repeat;
-          background-size: cover;
-          background-color: #fff;
-  
-          &.section-doctor {
-            width: 120px;
-            height: 120px;
-            border-radius: 50%;
-          }
-        }
-        .content-right {
-          // width:80%;
-          padding-left: 10px;
-          padding-top: 10px;
-        }
+    }
+    .modal-comment {
+      padding: 10px;
+      border-top: 1px solid #ccc;
+
+      .input-comment {
+        width: 80%;
+        border-radius: 12px;
+        border: none;
+        background-color: #f0f2f5;
+        padding: 6px;
       }
-      .modal-footer {
-        padding: 10px;
-        border-top: 1px solid #ccc;
+
+      .user-comment {
         display: flex;
-        justify-content: flex-end;
-        gap: 15px;
-        button {
-          border: none;
-          outline: none;
-          padding: 5px;
-          border-radius: 3px;
-          -webkit-border-radius: 3px;
-          -moz-border-radius: 3px;
-          -ms-border-radius: 3px;
-          -o-border-radius: 3px;
+        gap: 7px;
+        align-items: center;
+        justify-content: start;
+      }
+
+      .avt-comment {
+        img {
+          width: 32px;
+          height: 32px;
+          border-radius: 50%;
         }
       }
-      .modal-comment {
-        padding: 10px;
-        border-top: 1px solid #ccc;
-  
-        .input-comment {
-          width: 80%;
+
+      .comment-ideas {
+        gap: 4px;
+        width: -webkit-fit-content;
+        height: -webkit-fit-content;
+        width: -moz-fit-content;
+        height: -moz-fit-content;
+        margin-bottom: 18px;
+        .comment-text {
+          width: 100%;
           border-radius: 12px;
           border: none;
           background-color: #f0f2f5;
-          padding: 6px;
+          padding: 11px;
+          padding-top: 6px;
         }
-  
-        .user-comment {
-          display: flex;
-          gap: 7px;
-          align-items: center;
-          justify-content: start;
+
+        .user-cmt {
+          font-weight: 500;
+          margin-bottom: 3px;
+          font-size: 13px;
         }
-  
-        .avt-comment {
-          img {
-            width: 32px;
-            height: 32px;
-            border-radius: 50%;
-          }
+      }
+      .comment-more {
+        align-self: center;
+
+        &:hover {
+          cursor: pointer;
+          border-radius: 50%;
+          background-color: rgb(230, 229, 229);
         }
-  
-        .comment-ideas {
-          gap: 4px;
-          width: -webkit-fit-content;
-          height: -webkit-fit-content;
-          width: -moz-fit-content;
-          height: -moz-fit-content;
-          margin-bottom: 18px;
-          .comment-text {
-            width: 100%;
-            border-radius: 12px;
-            border: none;
-            background-color: #f0f2f5;
-            padding: 11px;
-            padding-top: 6px;
-          }
-  
-          .user-cmt {
-            font-weight: 500;
-            margin-bottom: 3px;
-            font-size: 13px;
-          }
-        }
-        .comment-more {
-          align-self: center;
-         
-  
-          &:hover{
-            cursor: pointer;
-            border-radius: 50%;
-            background-color: rgb(230, 229, 229);
-          }
-        }
-  
       }
     }
-  
-    input:focus,
-    textarea:focus,
-    select:focus {
-      outline: none;
-    }
   }
-  
-  .preview {
-    font-size: 16px;
-  
-    &:hover {
-      cursor: pointer;
-    }
-  }
-  .pagination {
-    margin: 15px auto;
-    display: flex;
-    list-style: none;
+
+  input:focus,
+  textarea:focus,
+  select:focus {
     outline: none;
-    
   }
-  .pagination > .active > a{
-    background-color: #14c974;
-    border-color: #47ccde ;
-    color: #fff;
-  }
-  .pagination > li > a{
-    border: 1px solid #47ccde ;
-    padding: 5px 10px;
-    outline: none;
+
+ 
+}
+
+.preview {
+  font-size: 16px;
+
+  &:hover {
     cursor: pointer;
-    background-color: #fff;
-    text-decoration: none;
   }
-  .pagination > .active > a, .pagination > .active > span, .pagination > .active > a:hover, .pagination > .active > span:hover, .pagination > .active > a:focus, .pagination > .active > span:focus{
-    background-color: #47ccde ;
-    border-color: #47ccde;
-    outline: none ;
-  }
-  .pagination > li > a, .pagination > li > span{
-    color: #47ccde
-  }
-  .pagination > li:first-child > a, .pagination > li:first-child > span, .pagination > li:last-child > a, .pagination > li:last-child > span{
-    border-radius: unset
-  }
+}
+.pagination {
+  margin: 15px auto;
+  display: flex;
+  list-style: none;
+  outline: none;
+}
+.pagination > .active > a {
+  background-color: #14c974;
+  border-color: #47ccde;
+  color: #fff;
+}
+.pagination > li > a {
+  border: 1px solid #47ccde;
+  padding: 5px 10px;
+  outline: none;
+  cursor: pointer;
+  background-color: #fff;
+  text-decoration: none;
+}
+.pagination > .active > a,
+.pagination > .active > span,
+.pagination > .active > a:hover,
+.pagination > .active > span:hover,
+.pagination > .active > a:focus,
+.pagination > .active > span:focus {
+  background-color: #47ccde;
+  border-color: #47ccde;
+  outline: none;
+}
+.pagination > li > a,
+.pagination > li > span {
+  color: #47ccde;
+}
+.pagination > li:first-child > a,
+.pagination > li:first-child > span,
+.pagination > li:last-child > a,
+.pagination > li:last-child > span {
+  border-radius: unset;
+}
+
+
+:root {
+  --label-control-color: #14c974;
+  --label-control-disabled: #959495;
+}
+
+
+form {
+  display: flex;
+  place-content: start;
+  width: 90%;
+  background-color: #fff;
+  margin-top: 10px;
+  -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
+    box-shadow: 2px 4px 10px 1px rgba(201, 201, 201, 0.47);
+    padding: 10px;
+    display: flex;
+    border-radius: 10px;
+    border: 0.5px solid rgb(219, 216, 216);
+    margin: auto;
+    margin-top: 10px;
+  
+}
+
+.label-control {
+  font-family: system-ui, sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 1.1;
+  display: grid;
+  grid-template-columns: 1em auto;
+  gap: 0.5em;
+}
+
+.label-control + .label-control {
+  margin-top: 1em;
+}
+
+.label-control--disabled {
+  color: var(--label-control-disabled);
+  cursor: not-allowed;
+}
+
+input[type="checkbox"] {
+  /* Add if not using autoprefixer */
+  -webkit-appearance: none;
+  /* Remove most all native input styles */
+  appearance: none;
+  /* For iOS < 15 */
+  background-color: var(--label-background);
+  /* Not removed via appearance */
+  margin: 0;
+
+  font: inherit;
+  color: currentColor;
+  width: 18px;
+  height: 18px;
+  border: 0.15em solid currentColor;
+  border-radius: 0.15em;
+  transform: translateY(-0.075em);
+
+  display: grid;
+  place-content: center;
+}
+
+input[type="checkbox"]::before {
+  content: "";
+  width: 12px;
+  height: 12px;
+  clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+  transform: scale(0);
+  transform-origin: bottom left;
+  transition: 120ms transform ease-in-out;
+  box-shadow: inset 1em 1em var(--label-control-color);
+  /* Windows High Contrast Mode */
+  background-color: CanvasText;
+}
+
+input[type="checkbox"]:checked::before {
+  transform: scale(1);
+}
+
+input[type="checkbox"]:focus {
+  outline: max(2px, 0.15em) solid currentColor;
+  outline-offset: max(2px, 0.15em);
+}
+
+input[type="checkbox"]:disabled {
+  --label-control-color: var(--label-control-disabled);
+
+  color: var(--label-control-disabled);
+  cursor: not-allowed;
+}

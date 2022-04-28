@@ -23,7 +23,6 @@ class ManageStatus extends Component {
    async componentDidMount(){
     let id= this.props.match.params.id;
        let a =await getUserStatus(id)
-       console.log('???',a.data.status)
        this.setState({
            status: a.data.status
        })
@@ -49,16 +48,6 @@ class ManageStatus extends Component {
           <div className="view-status">
             <Navbar></Navbar>
             <div className="sort">
-              {/* <select
-                className="select"
-                labelId="demo-simple-select-label"
-                onChange={(event) => this.onChangeInput(event, "sort")}
-              >
-                <SortIcon></SortIcon> 
-                <option> Sort by Date</option>
-                <option>Sort by Most liked</option>
-                <option>Sort by Most disliked</option>
-              </select> */}
             </div>
             {/* <OutlineSelect></OutlineSelect> */}
             <div className="status-container">
@@ -99,9 +88,7 @@ class ManageStatus extends Component {
                         </div>
                         <br></br>
                         
-                      </div>
-                      <DownloadIcon className="preview" onClick={()=>this.getZip(item.files)}>Hi</DownloadIcon>
-                      Download file!           
+                      </div>        
                     </div>
                   );
                 })}

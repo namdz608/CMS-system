@@ -16,6 +16,8 @@ import Opp from './Test'
 import DashBoard from './components/UserPage/Admin/Dashboard';
 import Home from './components/UserPage/Admin/home/Home';
 import List from './components/List'
+import LikeList from './components/UserPage/Admin/LikeList'
+
 function App() {
   return (
     <div className="App">
@@ -32,6 +34,7 @@ function App() {
       <Route path="/dashboard" component={DashBoard}/>
       <Route path="/home" component={Home}/> 
       <Route path="/list" component={List}/>
+      <Route path="/likelist" component={LikeList}/>
     </Switch>
     <ToastContainer
                         position="bottom-right"

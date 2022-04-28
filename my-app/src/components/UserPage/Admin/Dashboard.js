@@ -80,7 +80,7 @@ datasets: [
     async componentDidMount() {
       
       let a=await getReactionDash()
-      console.log()
+      
       let b=a.data.data.map(item => {
           return item.User.firstName
       })
@@ -104,7 +104,7 @@ datasets: [
 
   render() {
     return (
-      <div>
+      <div style={{width: "95%", height: "100%"}}>
         <Bar
           data={this.state}
           options={{

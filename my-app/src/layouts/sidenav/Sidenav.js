@@ -12,6 +12,7 @@ import CategoryIcon from '@mui/icons-material/Category';
 import GroupAddIcon from '@mui/icons-material/GroupAdd';
 import {Link} from 'react-router-dom';
 import { withRouter } from 'react-router';
+import ViewListIcon from '@mui/icons-material/ViewList';
 class Sidenav extends Component {
 
   handleOnClick=()=>{
@@ -54,15 +55,17 @@ this.props.history.push('/view-status',{state:this.props.location.state.state})
   this.props.history.push('/list',{state:this.props.location.state.state})
  }
 
+ likeList=()=>{
+  this.props.history.push('/likelist',{state:this.props.location.state.state})
+ }
+
 render() {
   let a=this.props.location.state.state.role
   console.log('render',a)
   return (
     <div className="sidenav">
       <div className="top">
-      <Link to="/" style={{textDecoration: "none"}}>
         <span className="logo">Staff's Ideas</span>
-        </Link>
       </div>
       <hr />
       <div className="center">
@@ -74,7 +77,12 @@ render() {
                     <span  >DashBoard</span>
                   </li>
           }
-
+         
+                    <li onClick={()=>this.likeList()}>
+                    <ViewListIcon className="icon"/>
+                    <span  >Popular Ideas</span>
+                  </li>
+         
           <li onClick={()=>this.handleOnClick()}>
             <LightbulbOutlinedIcon className="icon"></LightbulbOutlinedIcon>
             <span >View Ideas</span>

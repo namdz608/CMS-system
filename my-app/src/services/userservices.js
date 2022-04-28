@@ -68,6 +68,14 @@ const getUserStatus=(id)=>{
 const getReactionDash=()=>{
     return axios.get('/api/dashboard-reaction')
 }
+const deleteUser=(userId)=>{
+    return axios.delete('/api/delete-user',{
+        data:{
+            id: userId
+        }
+    })
+}
 export {createNewUser,handleLoginApi,handleCreateCategory,handleGetAllCategory,
     uploadStatus,deleteCate,getAllStatus,likeAndDis,postComment,getStatusDate,
-    setStatusDate,getCommentDate,setCommentDate,getAllUser,getUserStatus,getReactionDash}
+    setStatusDate,getCommentDate,setCommentDate,getAllUser,getUserStatus,getReactionDash,
+    deleteUser}

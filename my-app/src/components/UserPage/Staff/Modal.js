@@ -66,11 +66,12 @@ class ModalUser extends Component {
                             <label>
                             <input type="checkbox"  value="checkbox" 
                                     onChange={(event)=>this.handleCheckboxChange(event)}/>I have read and agreed to the terms and conditions</label>
-                            </div>
                             <div className="modal-footer">
                                 <button className="btn-booking"onClick={()=>this.saveInfo()}>Confirm</button>
                                 <button className="btn-cancel"onClick={this.props.CloseModal}>Close</button>
+                            </div>                           
                             </div>
+                            
 
                 </div>      
                 </Modal>  </div>   

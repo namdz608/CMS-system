@@ -42,7 +42,6 @@ class UploadStatus extends Component {
     async componentDidMount(){
         await this.getInfor()
         let a=await getStatusDate()
-        let date=moment.unix(+a.data.data.startDate /1000).format('dddd - DD/MM/YYYY')
         this.setState({
             start:+a.data.data.startDate,
             end:+a.data.data.endDate

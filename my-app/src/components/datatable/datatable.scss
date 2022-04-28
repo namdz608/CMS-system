@@ -1,17 +1,46 @@
+.likelist{
+  display: flex;
+  width: 100%;
+  
+
+  .list-cont{
+    flex: 4;
+
+
+    .likelist-top{
+      -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
+      box-shadow: 2px 4px 10px 1px rgba(201,201,201, 0.47);
+      padding: 10px;
+      margin: 20px;
+      h1{
+          color: rgb(131, 126, 126);
+          font-size: 30px;
+      }
+  }
+}
+}
+.bottom-cont{
+  -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
+        box-shadow: 2px 4px 10px 1px rgba(201,201,201, 0.47);
+        padding: 10px;
+        margin: 20px;
+        
+        border-radius: 10px;
+}
+
 .datatable {
-  height: 600px;
-  padding: 20px;
+  margin-left: 30px;
   
   .datatableTitle{
-    width: 100%;
-    font-size: 24px;
-    color: gray;
-    margin-bottom: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
-    box-shadow: 2px 4px 10px 1px rgba(201,201,201, 0.47);
+    
+      -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
+      box-shadow: 2px 4px 10px 1px rgba(201,201,201, 0.47);
+      padding: 10px;
+      margin: 20px;
+      h1{
+          color: rgb(131, 126, 126);
+          font-size: 30px;
+      }
     
     .link{
       text-decoration: none;
@@ -104,4 +133,17 @@
     }
 }
 
+}
+
+.user-list {
+  
+  background-color: #fff;
+  margin-top: 10px;
+  -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
+    box-shadow: 2px 4px 10px 1px rgba(201, 201, 201, 0.47);
+    padding: 10px;
+      margin: 20px;
+    display: flex;
+    border-radius: 10px;
+    border: 0.5px solid rgb(219, 216, 216);
 }

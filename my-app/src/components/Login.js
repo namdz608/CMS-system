@@ -38,7 +38,7 @@ class Login extends Component {
              <div className="login-wrap">
 	<div className="login-html">
 		<input id="tab-1" type="radio" name="tab" className="sign-in" checked/><label for="tab-1" className="tab">Sign In</label>
-		<input id="tab-2" type="radio" name="tab" className="sign-up"/><label for="tab-2" className="tab">Sign Up</label>
+		<input id="tab-2" type="radio" name="tab" className="sign-up"/><label for="tab-2" className="tab"></label>
 		<div className="login-form">
 			<div className="sign-in-htm">
 				<div className="group">

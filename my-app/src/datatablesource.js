@@ -16,18 +16,18 @@ import { CSVLink } from 'react-csv';
 export const userColumns = [
   { field: "id", headerName: "ID", width: 70 },
   {
-    field: "firstName",
-    headerName: "First Name",
+    field: "userID",
+    headerName: "User ID",
     width: 130,
   },
   {
-    field: "lastName",
-    headerName: "Last Name",
+    field: "like",
+    headerName: "Like",
     width: 130,
   },
   {
-    field: "email",
-    headerName: "Email",
+    field: "dislike",
+    headerName: "Dislike",
     width: 230,
   },
 

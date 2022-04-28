@@ -5,19 +5,40 @@ import AccountBalanceWalletOutlinedIcon from "@mui/icons-material/AccountBalance
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import MonetizationOnOutlinedIcon from "@mui/icons-material/MonetizationOnOutlined";
 import LightbulbOutlinedIcon from "@mui/icons-material/LightbulbOutlined";
+import axios from 'axios'
+import React, {useState, useEffect} from 'react'
+
 const Widget = ({ type }) => {
+  const [user, setUser] = useState([]);
+  const [idea, setIdea] = useState([]);
+  useEffect(async() => {
+    
+    const respone = await fetch ('https://staff-idea-cms.herokuapp.com/api/get-all-users');
+    const data =await respone.json();
+    const item = data.user;
+    setUser(item);
+  }, [])
+
+  useEffect(async() => {
+    const respone = await fetch ('https://staff-idea-cms.herokuapp.com/api/get-all-status');
+    const data =await respone.json();
+    const item = data.data;
+    setIdea(item);
+    
+  }, [])
+
+  // const userToRender = this.state.user.filter(item => item.display)
   let data;
-
-  //temporary
-  const amount = 100;
-
+  const amount = user.length;
+  const amountIdea = idea.length;
 
   switch (type) {
     case "user":
       data = {
         title: "USERS",
-        isMoney: false,
+        
         link: "See all users",
+        amount: user.length,
         icon: (
           <PersonOutlinedIcon
             className="icon"
@@ -34,6 +55,7 @@ const Widget = ({ type }) => {
         title: "IDEAS",
         isMoney: false,
         link: "View all ideas",
+        amount: idea.length,
         icon: (
           <LightbulbOutlinedIcon
             className="icon"
@@ -48,7 +70,7 @@ const Widget = ({ type }) => {
     case "earning":
       data = {
         title: "EARNINGS",
-        isMoney: true,
+       
         link: "View net earnings",
         icon: (
           <MonetizationOnOutlinedIcon
@@ -67,13 +89,11 @@ const Widget = ({ type }) => {
       <div className="left">
         <span className="title">{data.title}</span>
         <span className="counter">
-          {data.isMoney && "$"} {amount}
+          {data.amount} 
         </span>
         <span className="link">{data.link}</span>
       </div>
-      <div className="right">
-        {data.icon}
-      </div>
+      <div className="right">{data.icon}</div>
     </div>
   );
 };

@@ -1,12 +1,7 @@
 import React, { Component } from "react";
 import "./datatable.scss";
-import { DataGrid } from "@mui/x-data-grid";
-import { userColumns } from "../../datatablesource";
-import { Link } from "react-router-dom";
-import { getAllUser, getAllStatus } from "../../services/userservices";
-import { withRouter } from "react-router";
-import { CSVLink } from "react-csv";
-import DownloadIcon from "@mui/icons-material/Download";
+import { getAllUser, deleteUser } from "../../services/userservices";
+import {toast} from 'react-toastify'
 class Datatable extends Component {
   constructor(props) {
     super(props);
@@ -15,74 +10,56 @@ class Datatable extends Component {
       allUsers: [],
     };
   }
+  deleteUser=async(userId)=>{
+    await deleteUser(userId)
+    toast.success('delete user successfully')
+    this.componentDidMount()
+  }
 
   async componentDidMount() {
-    let a = await getAllStatus();
-    let result = [];
     let z = await getAllUser();
-    let b = a.data.data.map((item) => {
-      let o = {};
-      o.email = item.User.email;
-      o.content = item.contentMarkdown;
-      return o;
-    });
-    let c = a.data.data.map((item) => {
-      return item.contentMarkdown;
-    });
-    let obj = {};
-    obj.email = b;
-    obj.contentMarkdown = c;
-    // obj.files=d
-    result.push(obj);
-    this.setState({ user: b, allUsers: z.data });
+    this.setState({  allUsers: z.data });
   }
 
   render() {
-    const header = [
-      { label: "Email", key: "email" },
-      { label: "Content", key: "contentMarkdown" },
-      { label: "File", key: "files" },
-    ];
-    const a = this.state.user;
     const b = this.state.allUsers.user;
-    const csvReport = {
-      filename: "Report.csv",
-      header: header,
-      data: a,
-    };
-
-    const actionColumn = [
-      {
-        field: "action",
-        headerName: "Action",
-        width: 200,
-        renderCell: (params) => {
-          return (
-            <div className="cellAction">
-              <div className="deleteButton">Delete</div>
-            </div>
-          );
-        },
-      },
-    ];
+    
     
     return (
+      
       <div className="datatable">
-        <div className="datatableTitle">Users List</div>
-        <DataGrid
-          className="datagrid"
-          rows={b}
-          columns={userColumns.concat(actionColumn)}
-          pageSize={9}
-          rowsPerPageOptions={[9]}
-          checkboxSelection
-        />
+        <div className="datatableTitle"><h1>Users List</h1></div>
+        <div className="user-list">
+        <table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">First Name</th>
+      <th scope="col">Last Name</th>
+      <th scope="col">Email</th>
+      <th scope="col">Role</th>
+      <th scope="col">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    {b && b.map((item,index)=>{
+      return(
+      <tr>
+      <th scope="row">{item.id}</th>
+      <td>{item.firstName}</td>
+      <td>{item.lastName}</td>
+      <td>{item.email}</td>
+      <td>{item.role}</td>
+      <td><button className="btn btn-warning"onClick={()=>this.deleteUser(item.id)}>Delete</button></td>
+    </tr>
+      )
+    })}
+    
+  </tbody>
+</table>
         <div className="downloadButton">
-          <button className="btn btn-warning">
-            <CSVLink className="csv" {...csvReport}>Download CSV</CSVLink>
-            <DownloadIcon></DownloadIcon>
-          </button>
         </div>
+      </div>
       </div>
     );
   }

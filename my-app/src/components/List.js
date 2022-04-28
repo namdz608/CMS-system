@@ -7,7 +7,7 @@ const List = () => {
   return (
     <div className="list">
       <Sidenav/>
-      <div className="listContainer">
+      <div className="list-container">
         <Navbar/>
         <Datatable/>
       </div>
