@@ -52,4 +52,19 @@ o See the lists of Most Popular Ideas (+1 for Thumbs Up, -1 for
 Thumbs Down), Most Viewed Ideas, Latest Ideas and Latest
 Comments
 
+Account Details for each Role:
+Administrator: 
++Username: abc
++Password: 123
 
+Staff:
++Username: dcmclgtdat2@gmail.com
++Password: 123456
+
+QA Manager:
++Username: phuongvtgch17530@fpt.edu.vn
++Password: 123456
+
+QA Coordinator:
++Username: namvkgch190855@fpt.edu.vn
++Password: 123456
